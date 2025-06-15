@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "pagina_nosotros_1",
+  "info": {
+    "singularName": "pagina-nosotros",
+    "pluralName": "pagina-nosotros-1",
+    "displayName": "pagina-nosotros",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Mision": {
+      "type": "blocks"
+    },
+    "vision": {
+      "type": "blocks"
+    },
+    "historia": {
+      "type": "blocks"
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "objetivo_general": {
+      "type": "blocks"
+    },
+    "objectivos_especificos": {
+      "type": "blocks"
+    }
+  }
+}

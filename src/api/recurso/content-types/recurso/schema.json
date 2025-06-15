@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recursos",
+  "info": {
+    "singularName": "recurso",
+    "pluralName": "recursos",
+    "displayName": "recurso",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "archivo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "categoria": {
+      "type": "enumeration",
+      "enum": [
+        "DOCUMENTO",
+        "VIDEO",
+        "WEB_LINK",
+        "IMAGEN_GALERIA",
+        "INFORME",
+        "BLOG_POST",
+        "OTRO"
+      ]
+    },
+    "externalUrl": {
+      "type": "string"
+    }
+  }
+}

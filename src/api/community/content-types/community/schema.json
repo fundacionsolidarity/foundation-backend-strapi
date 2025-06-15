@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "communities",
+  "info": {
+    "singularName": "community",
+    "pluralName": "communities",
+    "displayName": "community"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Facebook": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "string"
+    },
+    "Instagram": {
+      "type": "string"
+    },
+    "Linkeding": {
+      "type": "string"
+    }
+  }
+}

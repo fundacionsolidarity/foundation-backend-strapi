@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testimonios",
+  "info": {
+    "singularName": "testimonio",
+    "pluralName": "testimonios",
+    "displayName": "testimonio",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "destacado": {
+      "type": "boolean"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "text": {
+      "type": "blocks"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

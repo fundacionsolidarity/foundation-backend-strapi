@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "contactos",
+  "info": {
+    "singularName": "contacto",
+    "pluralName": "contactos",
+    "displayName": "contacto"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "direccion": {
+      "type": "string"
+    },
+    "mapa_iframe": {
+      "type": "text"
+    }
+  }
+}

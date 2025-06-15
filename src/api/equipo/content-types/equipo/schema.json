@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "equipos",
+  "info": {
+    "singularName": "equipo",
+    "pluralName": "equipos",
+    "displayName": "Equipo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "Cargo": {
+      "type": "string"
+    },
+    "Biografia": {
+      "type": "blocks"
+    },
+    "Foto": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

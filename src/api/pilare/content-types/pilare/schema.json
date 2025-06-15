@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pilares",
+  "info": {
+    "singularName": "pilare",
+    "pluralName": "pilares",
+    "displayName": "pilare"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "blocks"
+    }
+  }
+}

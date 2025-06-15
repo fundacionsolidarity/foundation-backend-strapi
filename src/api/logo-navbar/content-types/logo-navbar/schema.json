@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "logo_navbars",
+  "info": {
+    "singularName": "logo-navbar",
+    "pluralName": "logo-navbars",
+    "displayName": "logo-navbar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "logoNavbar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
