@@ -373,40 +373,6 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiBannerPrincipalBannerPrincipal
-  extends Struct.SingleTypeSchema {
-  collectionName: 'banner_principals';
-  info: {
-    description: '';
-    displayName: 'banner-principal';
-    pluralName: 'banner-principals';
-    singularName: 'banner-principal';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    cta_link: Schema.Attribute.String;
-    cta_text: Schema.Attribute.String;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::banner-principal.banner-principal'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    subtitulo: Schema.Attribute.String;
-    titulo: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    visible: Schema.Attribute.Boolean;
-  };
-}
-
 export interface ApiCommunityCommunity extends Struct.SingleTypeSchema {
   collectionName: 'communities';
   info: {
@@ -519,6 +485,7 @@ export interface ApiEventoEvento extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     descripcion: Schema.Attribute.Text;
+    destacado: Schema.Attribute.Boolean;
     fecha: Schema.Attribute.DateTime;
     imagen: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
@@ -563,6 +530,38 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     subtitulo: Schema.Attribute.String;
     telefono: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiHeroHero extends Struct.SingleTypeSchema {
+  collectionName: 'heroes';
+  info: {
+    displayName: 'Hero';
+    pluralName: 'heroes';
+    singularName: 'hero';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    carousel_images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cta_link: Schema.Attribute.String;
+    cta_text: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::hero.hero'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1292,12 +1291,12 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::banner-principal.banner-principal': ApiBannerPrincipalBannerPrincipal;
       'api::community.community': ApiCommunityCommunity;
       'api::contacto.contacto': ApiContactoContacto;
       'api::equipo.equipo': ApiEquipoEquipo;
       'api::evento.evento': ApiEventoEvento;
       'api::footer.footer': ApiFooterFooter;
+      'api::hero.hero': ApiHeroHero;
       'api::logo-navbar.logo-navbar': ApiLogoNavbarLogoNavbar;
       'api::noticia.noticia': ApiNoticiaNoticia;
       'api::pagina-nosotros.pagina-nosotros': ApiPaginaNosotrosPaginaNosotros;
